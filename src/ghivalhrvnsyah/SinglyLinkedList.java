@@ -62,6 +62,17 @@ public class SinglyLinkedList<E> {
         }
         return removedItem;
     }
+    public E romoveFromFront() throws NoSuchElementException {
+        ListNode tmp = firstNode;
+        if(isEmpty()){
+            System.out.println("Data tidak ditemukan");
+        }
+        else{
+            firstNode = firstNode.next;
+            tmp = null;
+        }
+        return (E) tmp;
+    }
     public void printData(){
         if(isEmpty()) {
             System.out.println("Data Tidak Ditemukan");
